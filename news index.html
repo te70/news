@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<div class="row">
+    {% for newsItem in news %}
+    <div class="col-m-4">
+        <div class="class mb-2">
+            <!--<img class="card-img-top" src="{% static  project.image %}">-->
+            <div class="card-body">
+                <h5 class="card-title">
+                    {{ newsItem.title }}
+                </h5>
+                <p class="card-text">{{ newsItem.message }}</p>
+               <!-- <a href="" class="btn btn-primary">Read More</a>-->
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
